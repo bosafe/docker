@@ -7,7 +7,7 @@ RUN rm -rf /etc/yum.repos.d/* \
 	&& yum clean all && yum makecache \
 	&& yum install zlib-devel pcre-devel make gcc libc-devel openssl openssl-devel curl perl-devel geoip-devel gd-devel libxslt-devel gnupg linux-headers -y 
 
-RUN useradd -d /var/www/ -c "Nginx Server User" -s /sbin/nologin nginx 
+RUN useradd -d /var/cache/nginx -c "Nginx Server User" -s /sbin/nologin nginx 
 
 RUN curl -fSL https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -o nginx-$NGINX_VERSION.tar.gz
 
