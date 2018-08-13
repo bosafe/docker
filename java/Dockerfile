@@ -7,6 +7,6 @@ RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 
 RUN rm -rf /etc/yum.repos.d/* \
 	&& curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo \
-	&& yum clean all && yum makecache && yum update\
+	&& yum clean all && yum makecache && yum update -y \
 	&& yum install java-1.8.0-openjdk -y 
 
